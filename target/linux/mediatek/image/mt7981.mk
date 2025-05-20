@@ -4,7 +4,7 @@ MT7981_USB_PKGS := automount blkid blockdev fdisk \
     kmod-nls-cp437 kmod-nls-iso8859-1 kmod-usb2 kmod-usb3 \
     luci-app-usb-printer luci-i18n-usb-printer-zh-cn \
     kmod-usb-net-rndis usbutils \
-    kmod-usb-net-qmi-wwan autoksmbd
+    kmod-usb-net-qmi-wwan 
 
 define Device/mt7981-spim-nor-rfb
   DEVICE_VENDOR := MediaTek
@@ -479,7 +479,7 @@ define Device/cudy_tr3000-v1
    UBINIZE_OPTS := -E 5
    BLOCKSIZE := 128k
    PAGESIZE := 2048
-   IMAGE_SIZE := 65536k
+   IMAGE_SIZE := 114688k
    KERNEL_IN_UBI := 1
    IMAGES += factory.bin
    IMAGE/factory.bin := append-ubi | check-size $$$$(IMAGE_SIZE)
